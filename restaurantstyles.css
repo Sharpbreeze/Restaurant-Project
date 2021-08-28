@@ -1,0 +1,40 @@
+header, footer {
+    background-color: indianred;
+    color: black;
+    }
+ header {
+    font-family: Comic Sans MS;
+    }
+ a:link {
+ color:green;
+ }
+ a:visited {
+ color: indianred;
+ }
+ a:hover {
+ text-decoration: none;
+ font-weight: bold;
+ color: black;
+ }
+ a:active {
+ font-weight: bold;
+ }
+
+.form{
+text-align: center;
+font-family: sans-serif;
+top: 50%;
+left: 50%;
+
+padding: 40px 40px;
+box-sizing: border-box;
+box-radius: 10px;
+box-shadow: 0 0 20px #000000b3;
+width: 85%;
+max-width: 500px;
+
+}
+.btn{
+background- color: indianred;
+}
+
