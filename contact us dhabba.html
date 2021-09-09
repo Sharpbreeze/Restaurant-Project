@@ -2,10 +2,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <title>Contact Us</title>
     <link href="restaurantstyles.css" rel="stylesheet" type="text/css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+         <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
 
+
+
+    <!-- Bootstrap core CSS -->
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+     <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="RESTAURANTPROJECT.JS"></script>
+<script src="https://kit.fontawesome.com/c4336d5dd2.js" crossorigin="anonymous"></script>
 </head>
 <style>
     body {
@@ -32,20 +47,18 @@
 <hr />
     <article class="border";>
         <ul class="nav justify-content-center">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="home%20dhabba.html">Home</a>
+            <li class="home"><a href="home%20dhabba.html"><i class="fas fa-home"></i><div class="home-image"></div></a></li>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="menu%20dhaba.html">Menu</a>
+  <li class="nav-item"><a class="nav-link" href="menu%20dhaba.html">Menu</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="contact%20us%20dhabba.html">Contact Us</a>
+  <li class="nav-item"><a class="nav-link" href="contact%20us%20dhabba.html">Contact Us</a>
   </li>
 </ul>
 
         <hr />
 </nav>
 <br />
+<main>
 <article id="information">
 <body>
 
@@ -67,7 +80,7 @@
 <form class="row g-3 needs-validation" novalidate>
   <div class="col-md-4">
     <label for="validationCustom01" class="form-label">First name:</label>
-    <input type="text" class="form-control" id="validationCustom01" placeholder="Enter your Name" required><br />
+    <input type="text" onclick="myFunction" class="form-control" id="validationCustom01" placeholder="Enter your Name" required><br />
     <br />
     <div class="valid-feedback">
 
@@ -76,7 +89,7 @@
   </div>
   <div class="col-md-4">
     <label for="validationCustom02" class="form-label">Email:</label>
-    <input type="text" class="form-control" id="validationCustom02"  placeholder="Enter your Email" required><br />
+    <input type="text" onclick="myFunction" class="form-control" id="validationCustom02"  placeholder="Enter your Email" required><br />
     <br />
     <div class="valid-feedback">
 
@@ -84,7 +97,7 @@
   </div>
      <div class="col-md-4">
     <label for="validationCustomUsername" class="form-label">Phone Number:</label>
-      <input type="text" class="form-control" id="validationCustomUsername" placeholder="Enter your Phone number" required><br />
+      <input type="text" onclick="myFunction" class="form-control" id="validationCustomUsername" placeholder="Enter your Phone number" required><br />
     <br />
          <div class="input-group has-validation">
 
@@ -96,9 +109,8 @@
     <div class="col-md-3">
     <label for="validationCustom04" class="form-label">Reason for Inquiry:</label>
     <select class="form-select" id="validationCustom04" required>
-      <option selected disabled value="">Choose...</option>
-      <option>...</option>
-        <option value="Catering">Catering</option>
+
+      <option value="Catering">Catering</option>
     <option value="Private Party">Private Party</option>
     <option value="Feedback">Feedback</option>
     <option value="Others">Others</option>
@@ -126,24 +138,44 @@
     <div class="col-12">
     <div class="form-check">
       Hve you been in a restaurant?<input class="form-check-input"  id="invalidCheck" type="radio" name="answer" value="Yes" checked required>Yes
-         <input class="form-check-input"  id="invalidCheck"  type="radio" name="answer" value="No" required>No<br />
+         <input class="form-check-input" onclick="myFunction" id="invalidCheck"  type="radio" name="answer" value="No" required>No<br />
 
 
     <br />
-    Best days to contact you: <input type="checkbox" name="mychoice" value="M" checked/>M
-    <input type="checkbox" name="mychoice" value="T" checked/>T
-    <input type="checkbox" name="mychoice" value="W" checked/>W
-    <input type="checkbox" name="mychoice" value="Th" checked/>TH<br />
+    Best days to contact you: <input type="checkbox" onclick="myFunction" name="mychoice" value="M" checked/>M
+    <input type="checkbox" name="mychoice" onclick="myFunction" value="T" checked/>T
+    <input type="checkbox" name="mychoice" onclick="myFunction" value="W" checked/>W
+    <input type="checkbox" name="mychoice" onclick="myFunction" value="Th" checked/>TH<br />
     <br />
     <div class="btn">
-        <input type="Submit" name="Submit" value="Send Request" color="indianred" /></div>
+        <input type="Submit" onclick="myFunction" name="Submit" value="Send Request" color="indianred" /></div>
     <br />
 </form>
 
 </center>
-
-
-
+<script>
+function myFunction() {
+  const inpObj = document.getElementById("id1");
+  if (!inpObj.checkValidity()) {
+    document.getElementById("demo").innerHTML = inpObj.validationMessage;
+  } else {
+    document.getElementById("demo").innerHTML = "Input OK";
+  }
+}
+</script>
+    <script type="javascript">
+    ... construction of ajaxy-link,  setting of "js-enabled" cookie flag, etc..
+</script>
+<noscript>
+    <a href="next_page.php?nojs=1">Next Page</a>
+</noscript>
+    <noscript>
+    <img src="no_js.gif" alt="Javascript not enabled" />
+</noscript>"
+     <noscript>
+                <p style="font-weight:bold; text-align: center; padding-bottom: 50px;"><span style="color:red; font-size: 40px">JavaScript is disabled in your browser!</span></br>
+                <span style="color:rgb(180, 8, 8); font-size: 20px">This site is best viewed with JavaScript enabled</span></p>
+            </noscript>
 
 </body>
     <br />
@@ -152,6 +184,7 @@
 <hr />
 
 <footer>
+    </main>
 <p>13688, Surrey, B.C., V3V6Y5</p>
 <p>1800-000-1000</p>
 </footer>
